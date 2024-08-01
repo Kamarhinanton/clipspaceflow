@@ -1,0 +1,39 @@
+:root {
+  // HEADINGS
+  --font-h1: 700 44rem / 150% var(--font-family-primary);
+
+  // BODY
+  --font-m: 400 20rem / 150% var(--font-family-secondary);
+  --font-m-bold: 700 20rem / 150% var(--font-family-secondary);
+  --font-s: 400 18rem / 150% var(--font-family-secondary);
+  --font-s-bold: 700 18rem / 150% var(--font-family-secondary);
+
+  // OTHER
+  --gradient: linear-gradient(90deg, rgba(155,240,103,1) 0%, rgba(34,242,214,1) 100%);
+
+  // COLORS
+  --white: #fff;
+  --black: #232323;
+  --grey: #373737;
+  --grey-light: #6E6E6E;
+  --red: #FE4F05;
+  --green: #9BF067;
+
+  // BASE ANIMATIONS
+  --ease: ease;
+  --duration: 0.5s;
+  --hover-delay: 0.2s;
+}
+
+@media (width <= $breakpoint-mob) {
+  :root {
+    // HEADINGS
+    --font-h1: 700 28rem / 130% var(--font-family-primary);
+
+    // BODY
+    --font-m: 400 18rem / 130% var(--font-family-secondary);
+    --font-m-bold: 700 18rem / 130% var(--font-family-secondary);
+    --font-s: 400 16rem / 130% var(--font-family-secondary);
+    --font-s-bold: 700 16rem / 130% var(--font-family-secondary);
+  }
+}
