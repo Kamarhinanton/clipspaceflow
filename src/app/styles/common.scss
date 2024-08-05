@@ -1,5 +1,5 @@
 html {
-  font-size: calc(100vw / 1920);
+  font-size: calc(100vw / 1440);
 
   @media (width <= $breakpoint-mob) {
     font-size: calc(100vw / 390);

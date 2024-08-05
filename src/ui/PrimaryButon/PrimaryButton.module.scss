@@ -1,0 +1,13 @@
+.primaryButton{
+  min-width: 215rem;
+  padding: 17rem;
+  font: var(--font-s-bold);
+  background-image: linear-gradient(to right, var(--green), var(--green-light), var(--green-light), var(--green));
+  background-size: 300% 100%;
+  border-radius: 600rem;
+  transition: var(--duration) var(--ease);
+
+  &:hover{
+    background-position: 100% 0;
+  }
+}

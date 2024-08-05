@@ -3,6 +3,7 @@ import localFont from 'next/font/local'
 import Head from 'next/head'
 
 import '@/app/styles/index.scss'
+import AppLayout from '@/app/layouts/AppLayout'
 
 const narrowBlack = localFont({
   src: [
@@ -63,7 +64,9 @@ export default function App({ Component, pageProps }: AppProps) {
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
         />
       </Head>
-      <Component {...pageProps} />
+      <AppLayout>
+        <Component {...pageProps} />
+      </AppLayout>
     </>
   )
 }
