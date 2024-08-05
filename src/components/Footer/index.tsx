@@ -11,7 +11,8 @@ const Footer = () => {
       <Container>
         <div>
           <EnterButton />
-          <PrimaryButon>Next</PrimaryButon>
+          <PrimaryButon variant={'dark'}>Join as video creator</PrimaryButon>
+          <PrimaryButon>Join as video creator</PrimaryButon>
         </div>
       </Container>
     </footer>

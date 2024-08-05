@@ -3,8 +3,11 @@ import classNames from 'classnames'
 
 import styles from './PrimaryButton.module.scss'
 
+type ButtonPrimaryVariants = 'light' | 'dark'
+
 type ButtonPrimaryProps = {
   className?: string
+  variant?: ButtonPrimaryVariants
 } & DetailedHTMLProps<
   ButtonHTMLAttributes<HTMLButtonElement>,
   HTMLButtonElement
@@ -12,15 +15,23 @@ type ButtonPrimaryProps = {
 
 const PrimaryButton: FC<ButtonPrimaryProps> = ({
   children,
+  variant = 'light',
   className,
   ...buttonProps
 }) => {
+  const mods = {
+    [styles[variant]]: true,
+  }
+
   return (
     <button
-      className={classNames(styles['primaryButton'], className)}
+      className={classNames(styles['primaryButton'], className, mods)}
       {...buttonProps}
     >
-      {children}
+      <span>{children}</span>
+      {variant === 'dark' && (
+        <span className={styles['primaryButton__cloneText']}>{children}</span>
+      )}
     </button>
   )
 }

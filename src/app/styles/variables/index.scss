@@ -19,11 +19,12 @@
   --red: #FE4F05;
   --green: #9BF067;
   --green-light: #22F2D6;
+  --secondary:  #3C2D2D;
 
   // BASE ANIMATIONS
   --ease: ease;
-  --duration: 0.5s;
-  --hover-delay: 0.2s;
+  --duration: 0.8s;
+  --hover-delay: 0.4s;
 }
 
 @media (width <= $breakpoint-mob) {

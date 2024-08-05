@@ -1,13 +1,72 @@
-.primaryButton{
+@import '@/app/styles/variables/breakpoints';
+
+.primaryButton {
+  position: relative;
   min-width: 215rem;
   padding: 17rem;
   font: var(--font-s-bold);
-  background-image: linear-gradient(to right, var(--green), var(--green-light), var(--green-light), var(--green));
-  background-size: 300% 100%;
   border-radius: 600rem;
-  transition: var(--duration) var(--ease);
 
-  &:hover{
-    background-position: 100% 0;
+  &.light {
+    background-image: linear-gradient(to right, var(--green), var(--green-light), var(--green-light), var(--green));
+    background-size: 300% 100%;
+    transition: background-position var(--duration) var(--ease);
+
+    @media (width>$breakpoint-mob) {
+      &:hover {
+        background-position: 100% 0;
+      }
+    }
+  }
+
+  &.dark {
+    overflow: hidden;
+    background: linear-gradient(to right, var(--green), var(--green-light));
+    background-clip: text;
+    border: 1rem solid var(--secondary);
+    -webkit-text-fill-color: transparent;
+
+    .primaryButton {
+      &__cloneText {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        white-space: nowrap;
+        background: initial;
+        background-clip: initial;
+        transform: translateY(-50%) translateX(-50%);
+        opacity: 0;
+        transition: opacity var(--duration) var(--ease);
+        -webkit-text-fill-color: initial;
+      }
+    }
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to right, var(--green), var(--green-light));
+      opacity: 0;
+      transition: all var(--duration) var(--ease);
+      content: '';
+      pointer-events: none;
+      will-change: opacity;
+    }
+
+    @media (width>$breakpoint-mob) {
+      &:hover {
+        .primaryButton {
+          &__cloneText {
+            opacity: 1;
+          }
+        }
+
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
   }
 }
