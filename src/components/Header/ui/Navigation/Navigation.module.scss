@@ -1,0 +1,23 @@
+@import '@/app/styles/variables/breakpoints';
+
+.navigation{
+  display: flex;
+  margin: 0 67rem;
+
+  &__link{
+    margin: 0 32rem 0 0;
+    color: var(--grey-light);
+    font: var(--font-s-bold);
+    transition:color var(--duration) var(--ease);
+
+    &:last-child{
+      margin: 0;
+    }
+
+    @media (width>$breakpoint-mob) {
+      &:hover {
+        color: var(--green);
+      }
+    }
+  }
+}
