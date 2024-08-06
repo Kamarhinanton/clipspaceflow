@@ -1,0 +1,31 @@
+.burger {
+  position: relative;
+  box-sizing: content-box;
+  width: 32rem;
+  height: 16rem;
+  cursor: pointer;
+
+  &__line {
+    position: absolute;
+    right: 3rem;
+    width: calc(100% - 6rem);
+    height: 3rem;
+    background-image: var(--gradient) ;
+    border-radius: 7px;
+
+    &:nth-child(1) {
+      top: 0;
+      z-index: 2;
+    }
+
+    &:nth-child(2) {
+      top: 50%;
+      z-index: 2;
+      transform: translateY(-50%);
+    }
+
+    &:nth-child(3) {
+      bottom: 0;
+    }
+  }
+}

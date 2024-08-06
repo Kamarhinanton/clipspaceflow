@@ -1,7 +1,9 @@
+@import '@/app/styles/variables/breakpoints';
+
 .header {
   position: relative;
 
-  &::before{
+  &::before {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -13,11 +15,20 @@
 
   &__content {
     display: flex;
+    align-items: center;
     justify-content: space-between;
     padding: 16rem 0;
 
+    @media (width<=$breakpoint-mob) {
+      padding: 12rem 0;
+    }
+
     &_logo {
       width: 148rem;
+
+      @media (width<=$breakpoint-mob) {
+        width: 112rem;
+      }
 
       svg {
         width: 100%;
@@ -26,11 +37,15 @@
       }
     }
 
-    &_submenu{
+    &_submenu {
       display: flex;
       align-items: center;
 
-      .buttons{
+      @media (width<=$breakpoint-mob) {
+        display: none;
+      }
+
+      .buttons {
         display: flex;
         gap: 8rem;
       }
