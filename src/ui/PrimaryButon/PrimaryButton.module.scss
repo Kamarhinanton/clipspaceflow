@@ -2,10 +2,11 @@
 
 .primaryButton {
   position: relative;
-  min-width: 215rem;
-  padding: 13rem;
+  display: inline-block;
   font: var(--font-s-bold);
   border-radius: 600rem;
+
+  //types
 
   &.light {
     background-image: linear-gradient(to right, var(--green), var(--green-light), var(--green-light), var(--green));
@@ -67,6 +68,23 @@
           opacity: 1;
         }
       }
+    }
+  }
+
+  //sizes
+
+  &.small{
+    min-width: 215rem;
+    padding: 13rem;
+  }
+
+  &.large{
+    min-width: 370rem;
+    padding: 32rem;
+
+    @media (width<=$breakpoint-mob) {
+      min-width: 215rem;
+      padding: 16rem;
     }
   }
 }

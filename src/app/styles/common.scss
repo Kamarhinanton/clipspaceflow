@@ -39,6 +39,13 @@ main {
   position: relative;
 }
 
+.root{
+  padding: 84rem 0 0;
+  @media (width<= $breakpoint-mob) {
+    padding: 52rem 0 0;
+  }
+}
+
 .desk-view {
   @media (width<=$breakpoint-mob) {
     display: none;

@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import { HomeContent } from '@/modules/Home'
 
 export default function Home() {
   return (
@@ -6,10 +7,7 @@ export default function Home() {
       <Head>
         <title>Clipspace flow</title>
       </Head>
-      <main>
-        <h1>Hello</h1>
-        <p>hello</p>
-      </main>
+      <HomeContent />
     </>
   )
 }

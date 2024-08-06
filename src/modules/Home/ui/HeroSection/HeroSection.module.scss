@@ -1,0 +1,44 @@
+@import '@/app/styles/variables/breakpoints';
+
+.hero{
+  display: flex;
+  align-items: center;
+  min-height: calc(100vh - 84rem);
+
+  &__content{
+    gap: 48rem;
+    max-width: 840rem;
+    margin: 0 auto;
+    text-align: center;
+
+    .title{
+      margin: 0 0 48rem;
+
+      @media (width <= $breakpoint-mob) {
+        margin: 0 0 32rem;
+      }
+
+      span{
+        background: linear-gradient(to right, var(--green), var(--green-light));
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    .description{
+      font-size: 20rem;
+
+      @media (width <= $breakpoint-mob) {
+        font-size: 16rem;
+      }
+    }
+
+    .button{
+      margin: 48rem 0 0;
+
+      @media (width <= $breakpoint-mob) {
+        margin: 32rem 0 0;
+      }
+    }
+  }
+}

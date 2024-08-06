@@ -4,11 +4,18 @@ import classNames from 'classnames'
 type PageLayoutProps = {
   children: ReactNode
   className?: string
+  size?: 'large' | 'small'
 }
 
-const Container: FC<PageLayoutProps> = ({ children, className }) => {
+const Container: FC<PageLayoutProps> = ({
+  children,
+  className,
+  size = 'small',
+}) => {
   return (
-    <div className={classNames('base-container', className)}>{children}</div>
+    <div className={classNames('base-container', className, size)}>
+      {children}
+    </div>
   )
 }
 

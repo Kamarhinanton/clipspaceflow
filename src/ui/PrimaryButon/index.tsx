@@ -4,10 +4,12 @@ import classNames from 'classnames'
 import styles from './PrimaryButton.module.scss'
 
 type ButtonPrimaryVariants = 'light' | 'dark'
+type ButtonPrimarySizes = 'small' | 'large'
 
 type ButtonPrimaryProps = {
   className?: string
   variant?: ButtonPrimaryVariants
+  size?: ButtonPrimarySizes
 } & DetailedHTMLProps<
   ButtonHTMLAttributes<HTMLButtonElement>,
   HTMLButtonElement
@@ -16,11 +18,13 @@ type ButtonPrimaryProps = {
 const PrimaryButton: FC<ButtonPrimaryProps> = ({
   children,
   variant = 'light',
+  size = 'small',
   className,
   ...buttonProps
 }) => {
   const mods = {
     [styles[variant]]: true,
+    [styles[size]]: true,
   }
 
   return (

@@ -4,9 +4,22 @@
   width: 100%;
   max-width: 1440rem;
   margin: 0 auto;
-  padding: 0 64rem;
+
+  &.small {
+    padding: 0 64rem;
+  }
+
+  &.large {
+    padding: 0 120rem;
+  }
 
   @media (width <= $breakpoint-mob) {
-    padding: 0 16rem;
+    &.small {
+      padding: 0 16rem;
+    }
+
+    &.large {
+      padding: 0 16rem;
+    }
   }
 }

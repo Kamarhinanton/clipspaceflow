@@ -1,6 +1,6 @@
 :root {
   // HEADINGS
-  --font-h1: 700 44rem / 150% var(--font-family-primary);
+  --font-h1: 700 88rem / 105% var(--font-family-primary);
 
   // BODY
   --font-m: 400 20rem / 150% var(--font-family-secondary);
@@ -13,7 +13,7 @@
 
   // COLORS
   --white: #fff;
-  --black: #232323;
+  --black: #0E1015;
   --grey: #373737;
   --grey-light: #B2B2C1;
   --red: #FE4F05;
@@ -30,7 +30,7 @@
 @media (width <= $breakpoint-mob) {
   :root {
     // HEADINGS
-    --font-h1: 700 28rem / 130% var(--font-family-primary);
+    --font-h1: 700 36rem / 130% var(--font-family-primary);
 
     // BODY
     --font-m: 400 18rem / 130% var(--font-family-secondary);

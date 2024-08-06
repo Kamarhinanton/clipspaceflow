@@ -10,6 +10,7 @@ const AppLayout: FC<AppLayoutProps> = ({ children }) => {
   return (
     <>
       <Header />
+      <div className={'root'} />
       {children}
       {/*<Footer />*/}
     </>
