@@ -4,11 +4,29 @@
   display: flex;
   margin: 0 67rem;
 
+  @media (width<=$breakpoint-mob){
+    flex-direction: column;
+    margin: auto 0;
+    padding: 42rem;
+  }
+
   &__link{
     margin: 0 32rem 0 0;
     color: var(--grey-light);
     font: var(--font-s-bold);
     transition:color var(--duration) var(--ease);
+
+    &.desktopHidden{
+      @media (width>$breakpoint-mob){
+        display: none;
+      }
+    }
+
+    @media (width<=$breakpoint-mob){
+      margin: 0 0 64rem;
+      color: var(--white);
+      font-size: 32rem;
+    }
 
     &:last-child{
       margin: 0;

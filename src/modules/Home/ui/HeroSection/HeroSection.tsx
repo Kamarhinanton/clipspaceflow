@@ -1,9 +1,9 @@
 import React from 'react'
 import Container from '@/app/layouts/Container'
-
-import styles from './HeroSection.module.scss'
 import classNames from 'classnames'
 import PrimaryButton from '@/ui/PrimaryButon'
+
+import styles from './HeroSection.module.scss'
 
 const HeroSection = () => {
   return (
