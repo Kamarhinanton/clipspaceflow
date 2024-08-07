@@ -6,7 +6,7 @@ const HomeContent = () => {
   return (
     <main>
       <HeroSection />
-      <Demo />
+      {/*<Demo />*/}
     </main>
   )
 }
