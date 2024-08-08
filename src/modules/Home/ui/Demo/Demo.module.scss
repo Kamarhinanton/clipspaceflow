@@ -36,52 +36,23 @@
     }
 
     &_square{
-      //$border: 8px;
-
       position: relative;
-
-      //box-sizing: border-box;
       height: 776rem;
-
-      //background-color: var(--black);
-
-      //background-clip: padding-box;
-      //border: $border solid transparent;
-      //border-radius: 24px;
-
-
-
-      background: linear-gradient(#000, #000) padding-box,
-      var(--gradient) border-box;
+      background: linear-gradient(#000, #000) padding-box, var(--gradient) border-box;
       border: 5px solid transparent;
       border-radius: 32px;
 
-
-
       @media (width <= $breakpoint-mob) {
         height: 232rem;
-        //$border: 5px;
         border: 3px solid transparent;
         border-radius: 12px;
-
-        //border-radius: 1em;
       }
 
-      //&::before {
-      //  position: absolute;
-      //  z-index: -1;
-      //  margin: -$border;
-      //  background: var(--gradient);
-      //  border-radius: inherit;
-      //  content: '';
-      //  inset: 0;
-      //}
-
-      &::after{
+      &::before{
         position: absolute;
         top: -200rem;
         left: -300rem;
-        z-index: -2;
+        z-index: -1;
         width: 1500rem;
         height: 1100rem;
         background-image: url("/images/demo/gradient_demo.png");
