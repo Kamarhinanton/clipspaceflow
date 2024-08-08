@@ -40,7 +40,7 @@ const Header = () => {
           >
             <Logo />
           </Link>
-          <div className={styles['header__content_submenu']}>
+          <div className={styles['header__content_navigation']}>
             <Navigation />
             <div className={styles['buttons']}>
               <PrimaryButton className={styles['btn']} variant={'dark'}>

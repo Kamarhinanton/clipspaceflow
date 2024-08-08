@@ -4,6 +4,12 @@
   display: flex;
   align-items: center;
   min-height: calc(100vh - 84rem);
+  padding: 80rem 0 101rem;
+
+  @media (width <= $breakpoint-mob) {
+    min-height: initial;
+    padding: 59rem 0 88rem;
+  }
 
   &__content{
     gap: 48rem;
@@ -12,7 +18,7 @@
     text-align: center;
 
     .title{
-      margin: 0 0 48rem;
+      margin: 0 0 39rem;
 
       @media (width <= $breakpoint-mob) {
         margin: 0 0 32rem;

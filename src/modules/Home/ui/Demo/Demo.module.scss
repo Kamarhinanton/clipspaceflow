@@ -1,3 +1,104 @@
-.demo{
+@import '@/app/styles/variables/breakpoints';
 
+.demo{
+  margin: 0 0 80rem;
+
+  @media (width <= $breakpoint-mob) {
+    margin: 0 0 40rem;
+  }
+
+  &__content{
+    &_text{
+      position: relative;
+      max-width: 380rem;
+      margin: 0 auto 40rem;
+      padding: 0 24rem;
+      color: var(--grey-light);
+      font: var(--font-m);
+      text-align: center;
+
+      @media (width <= $breakpoint-mob) {
+        margin: 0 auto 21rem;
+      }
+
+      &::before{
+        position: absolute;
+        right: 0;
+        bottom: -6rem;
+        width: 24rem;
+        height: 24rem;
+        background-image: url("/icons/enter.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 24rem 24rem;
+        content: '';
+      }
+    }
+
+    &_square{
+      //$border: 8px;
+
+      position: relative;
+
+      //box-sizing: border-box;
+      height: 776rem;
+
+      //background-color: var(--black);
+
+      //background-clip: padding-box;
+      //border: $border solid transparent;
+      //border-radius: 24px;
+
+
+
+      background: linear-gradient(#000, #000) padding-box,
+      var(--gradient) border-box;
+      border: 5px solid transparent;
+      border-radius: 32px;
+
+
+
+      @media (width <= $breakpoint-mob) {
+        height: 232rem;
+        //$border: 5px;
+        border: 3px solid transparent;
+        border-radius: 12px;
+
+        //border-radius: 1em;
+      }
+
+      //&::before {
+      //  position: absolute;
+      //  z-index: -1;
+      //  margin: -$border;
+      //  background: var(--gradient);
+      //  border-radius: inherit;
+      //  content: '';
+      //  inset: 0;
+      //}
+
+      &::after{
+        position: absolute;
+        top: -200rem;
+        left: -300rem;
+        z-index: -2;
+        width: 1500rem;
+        height: 1100rem;
+        background-image: url("/images/demo/gradient_demo.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        content: '';
+        pointer-events: none;
+
+        @media (width <= $breakpoint-mob) {
+          top: -200rem;
+          left: -100rem;
+          width: 650rem;
+          height: 500rem;
+          background-image: url("/images/demo/gradient_demo_mob.png");
+        }
+      }
+    }
+  }
 }

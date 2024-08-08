@@ -2,7 +2,7 @@
 
 .navigation{
   display: flex;
-  margin: 0 67rem;
+  margin: 0 39rem;
 
   @media (width<=$breakpoint-mob){
     flex-direction: column;
@@ -11,7 +11,7 @@
   }
 
   &__link{
-    margin: 0 32rem 0 0;
+    margin: 0 16rem;
     color: var(--grey-light);
     font: var(--font-s-bold);
     transition:color var(--duration) var(--ease);
@@ -23,13 +23,9 @@
     }
 
     @media (width<=$breakpoint-mob){
-      margin: 0 0 64rem;
+      margin: 0 0 38rem;
       color: var(--white);
       font-size: 32rem;
-    }
-
-    &:last-child{
-      margin: 0;
     }
 
     @media (width>$breakpoint-mob) {

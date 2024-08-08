@@ -9,9 +9,10 @@ const Demo = () => {
       <Container size={'large'}>
         <div className={styles['demo__content']}>
           <p className={styles['demo__content_text']}>
-            One platform to hire and manage short-form video creators. Watch
-            demo
+            One platform to hire and manage
+            <br /> short-form video creators. Watch demo
           </p>
+          <div className={styles['demo__content_square']}></div>
         </div>
       </Container>
     </section>

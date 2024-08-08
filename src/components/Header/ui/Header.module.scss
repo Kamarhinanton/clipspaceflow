@@ -33,6 +33,7 @@
 
       @media (width<=$breakpoint-mob) {
         width: 112rem;
+        height: 21rem;
       }
 
       svg {
@@ -42,7 +43,7 @@
       }
     }
 
-    &_submenu {
+    &_navigation {
       display: flex;
       align-items: center;
 

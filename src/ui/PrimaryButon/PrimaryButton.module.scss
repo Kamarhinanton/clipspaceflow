@@ -3,7 +3,6 @@
 .primaryButton {
   position: relative;
   display: inline-block;
-  font: var(--font-s-bold);
   border-radius: 600rem;
 
   //types
@@ -74,17 +73,17 @@
   //sizes
 
   &.small{
-    min-width: 215rem;
-    padding: 13rem;
+    padding: 13rem 36rem;
+    font: var(--font-s-bold);
   }
 
   &.large{
-    min-width: 370rem;
-    padding: 32rem;
+    padding: 32rem 88rem;
+    font: var(--font-m-bold);
 
     @media (width<=$breakpoint-mob) {
-      min-width: 215rem;
-      padding: 16rem;
+      padding: 13rem 36rem;
+      font: var(--font-s-bold);
     }
   }
 }
