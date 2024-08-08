@@ -8,6 +8,7 @@
   //types
 
   &.light {
+    color: var(--black);
     background-image: linear-gradient(to right, var(--green), var(--green-light), var(--green-light), var(--green));
     background-size: 300% 100%;
     transition: background-position var(--duration) var(--ease);
@@ -31,6 +32,7 @@
         position: absolute;
         top: 50%;
         left: 50%;
+        color: var(--black);
         white-space: nowrap;
         background: initial;
         background-clip: initial;
