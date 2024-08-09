@@ -38,14 +38,11 @@
     &_square{
       position: relative;
       height: 776rem;
-      background: linear-gradient(#000, #000) padding-box, var(--gradient) border-box;
-      border: 5px solid transparent;
-      border-radius: 32px;
+      border-radius: 32rem;
 
       @media (width <= $breakpoint-mob) {
         height: 232rem;
-        border: 3px solid transparent;
-        border-radius: 12px;
+        border-radius: 12rem;
       }
 
       &::before{

@@ -78,3 +78,11 @@ main {
     content: '';
   }
 }
+
+.colored-gradient-border{
+  background: linear-gradient(#000, #000) padding-box, var(--gradient) border-box;
+  border: 5rem solid transparent;
+  @media (width <= $breakpoint-mob) {
+    border: 3rem solid transparent;
+  }
+}

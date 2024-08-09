@@ -1,5 +1,6 @@
 import React from 'react'
 import Container from '@/app/layouts/Container'
+import classNames from 'classnames'
 
 import styles from './Demo.module.scss'
 
@@ -12,7 +13,12 @@ const Demo = () => {
             One platform to hire and manage
             <br /> short-form video creators. Watch demo
           </p>
-          <div className={styles['demo__content_square']}></div>
+          <div
+            className={classNames(
+              styles['demo__content_square'],
+              'colored-gradient-border',
+            )}
+          ></div>
         </div>
       </Container>
     </section>
