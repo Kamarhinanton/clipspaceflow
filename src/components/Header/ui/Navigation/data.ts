@@ -1,8 +1,8 @@
 import routes from '@/utils/routes'
 export const headerNavigationLinks = [
   {
-    href: routes.public.about,
-    description: 'About',
+    href: routes.public.joinBeta,
+    description: 'Join Beta',
     id: 1,
     desktop: true,
   },

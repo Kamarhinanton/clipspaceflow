@@ -1,7 +1,7 @@
 export default {
   public: {
     index: '/',
-    about: '#about',
+    joinBeta: '#joinBeta',
     howItWorks: '#howItWorks',
     clipSpaceAI: '#clipSpaceAI',
   },
