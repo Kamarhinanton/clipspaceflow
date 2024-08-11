@@ -4,7 +4,6 @@
   display: flex;
   align-items: center;
   min-height: calc(100vh - 84rem);
-  padding: 80rem 0 101rem;
 
   @media (width <= $breakpoint-mob) {
     min-height: initial;
@@ -12,38 +11,53 @@
   }
 
   &__content{
-    gap: 48rem;
-    max-width: 840rem;
-    margin: 0 auto;
-    text-align: center;
+    display: flex;
+    padding: 79rem 64rem 131rem;
+    background-color: var(--light-black);
+    border-radius: 24rem;
 
-    .title{
-      margin: 0 0 39rem;
+    &_left{
+      flex: 1 0 669rem;
 
-      @media (width <= $breakpoint-mob) {
-        margin: 0 0 32rem;
-      }
+      .title{
+        margin: 0 0 39rem;
 
-      span{
-        background: linear-gradient(to right, var(--green), var(--green-light));
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
+        @media (width <= $breakpoint-mob) {
+          margin: 0 0 32rem;
+        }
       }
     }
 
-    .description{
-      font-size: 20rem;
+    &_right{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 0 0 0 58rem;
+      text-align: center;
 
-      @media (width <= $breakpoint-mob) {
-        font-size: 16rem;
+      .image{
+        width: 300rem;
+        height: 90rem;
+        margin: 0 0 10rem;
       }
-    }
 
-    .button{
-      margin: 48rem 0 0;
+      p {
+        margin: 20rem 0 0;
+        font-size: 20rem;
+        line-height: 130%;
 
-      @media (width <= $breakpoint-mob) {
-        margin: 32rem 0 0;
+        @media (width <= $breakpoint-mob) {
+          font-size: 16rem;
+        }
+      }
+
+      .button{
+        margin: 40rem 0 0;
+
+        @media (width <= $breakpoint-mob) {
+          margin: 32rem 0 0;
+        }
       }
     }
   }
