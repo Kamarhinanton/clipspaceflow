@@ -1,9 +1,9 @@
 import type { AppProps } from 'next/app'
 import localFont from 'next/font/local'
 import Head from 'next/head'
+import AppLayout from '@/app/layouts/AppLayout'
 
 import '@/app/styles/index.scss'
-import AppLayout from '@/app/layouts/AppLayout'
 
 const narrowBlack = localFont({
   src: [
