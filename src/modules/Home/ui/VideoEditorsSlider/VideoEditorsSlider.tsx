@@ -11,7 +11,7 @@ import 'swiper/css'
 
 const swiperProps: SwiperProps = {
   direction: 'vertical',
-  speed: 3000,
+  speed: 2000,
   loop: true,
   // autoplay: true,
   slidesPerView: 1,
@@ -40,10 +40,7 @@ const VideoEditorsSlider = () => {
   return (
     <section className={styles['videoEditorsSlider']}>
       <Container>
-        <Swiper
-          {...swiperProps}
-          className={styles['videoEditorsSlider__content']}
-        >
+        <Swiper {...swiperProps} className={styles['slider']}>
           <div className="current-pagination" />
           {videoEditorsSliderData.map((slide) => (
             <SwiperSlide key={slide.id} className={styles['slide']}>
@@ -52,7 +49,9 @@ const VideoEditorsSlider = () => {
               >
                 <div className={styles['slide__left_content']}>
                   <p className={styles['topic']}>{slide.topic}</p>
-                  <h3 className={'h1'}>{slide.title}</h3>
+                  <h3 className={classNames('h1', styles['title'])}>
+                    {slide.title}
+                  </h3>
                   <p className={styles['text']}>{slide.description}</p>
                   <PrimaryButton
                     className={styles['button']}

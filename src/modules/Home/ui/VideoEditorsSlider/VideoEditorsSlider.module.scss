@@ -1,19 +1,53 @@
+@import '@/app/styles/variables/breakpoints';
+
 .videoEditorsSlider {
+  position: relative;
   margin: 40rem 0 263rem;
   padding: 200rem 0 0;
 
-  &__content {
-    height: 801rem;
+  @media (width <= $breakpoint-mob){
+    margin: 16rem 0 64rem;
+    padding: 34rem 0 0;
+  }
 
-    //background-color: var(--light-black);
+  &::before{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 32rem;
+    height: 32rem;
+    background-image: url("/icons/decor_star.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transform: translateX(-50%);
+    content: '';
+  }
+
+  .slider {
+    height: 801rem;
     border-radius: 24rem;
+
+    @media (width <= $breakpoint-mob){
+      height: 778rem;
+    }
 
     .slide {
       display: flex;
       background-color: var(--black-light);
 
+      @media (width <= $breakpoint-mob){
+        flex-direction: column;
+        justify-content: center;
+        padding: 13rem;
+      }
+
       .column {
         flex: 0 1 50%;
+
+        @media (width <= $breakpoint-mob){
+          flex: initial;
+        }
       }
 
       &__left {
@@ -21,19 +55,47 @@
         align-items: center;
         padding: 0 0 0 64rem;
 
+        @media (width <= $breakpoint-mob){
+          order: 2;
+          margin: 69rem 0 0;
+          padding: 0;
+        }
+
         &_content {
+          .title{
+            @media (width <= $breakpoint-mob) {
+              background: linear-gradient(to right, var(--green), var(--green-light));
+              background-clip: text;
+              -webkit-text-fill-color: transparent;
+            }
+          }
+
           .topic {
             font: var(--font-m-bold);
             font-size: 22rem;
+
+            @media (width <= $breakpoint-mob) {
+              background: linear-gradient(to right, var(--green), var(--green-light));
+              background-clip: text;
+              -webkit-text-fill-color: transparent;
+            }
           }
 
           .text {
             max-width: 392rem;
             margin: 40rem 0 0;
+
+            @media (width <= $breakpoint-mob){
+              margin: 16rem 0 0;
+            }
           }
 
           .button {
             margin: 40rem 0 0;
+
+            @media (width <= $breakpoint-mob){
+              margin: 16rem 0 0;
+            }
           }
         }
       }
@@ -43,6 +105,11 @@
         align-items: center;
         justify-content: center;
 
+        @media (width <= $breakpoint-mob){
+          position: relative;
+          order: 1;
+        }
+
         .square {
           position: relative ;
           width: 305rem;
@@ -50,6 +117,11 @@
           overflow: hidden;
           background: var(--gradient);
           border-radius: 48rem;
+
+          @media (width <= $breakpoint-mob){
+            width: 203rem;
+            height: 393rem;
+          }
 
           &__video{
             width: 100%;
@@ -72,14 +144,18 @@
   z-index: 10;
   display: flex;
   flex-direction: column;
-  width: 12rem;
+  width: 6rem;
   transform: translateY(-50%);
+
+  @media (width <= $breakpoint-mob){
+    right: 24rem;
+  }
 
   &__bullet {
     position: relative;
     width: 6rem;
     height: 23rem;
-    margin: 0 0 17rem;
+    margin: 0 0 9rem;
     background-image: url("/icons/empty_step.svg");
     background-repeat: no-repeat;
     background-position: center;
