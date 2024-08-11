@@ -22,10 +22,14 @@
 
   &.dark {
     overflow: hidden;
-    background: linear-gradient(to right, var(--green), var(--green-light));
-    background-clip: text;
+    background-color: transparent;
     border: 1rem solid var(--secondary);
-    -webkit-text-fill-color: transparent;
+
+    span{
+      background: linear-gradient(to right, var(--green), var(--green-light));
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
 
     .primaryButton {
       &__cloneText {
