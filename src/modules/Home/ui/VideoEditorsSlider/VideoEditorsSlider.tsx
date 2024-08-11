@@ -13,7 +13,7 @@ const swiperProps: SwiperProps = {
   direction: 'vertical',
   speed: 2000,
   loop: true,
-  // autoplay: true,
+  autoplay: true,
   slidesPerView: 1,
   pagination: {
     el: '.current-pagination',

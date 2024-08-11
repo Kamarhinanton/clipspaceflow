@@ -18,7 +18,7 @@
       text-align: center;
 
       @media (width <= $breakpoint-mob) {
-        margin: 0 auto 21rem;
+        margin: 0 auto 11rem;
         padding: 0;
         text-align: initial;
       }
@@ -43,7 +43,7 @@
       border-radius: 32rem;
 
       @media (width <= $breakpoint-mob) {
-        height: 232rem;
+        height: 236rem;
         border-radius: 12rem;
       }
 

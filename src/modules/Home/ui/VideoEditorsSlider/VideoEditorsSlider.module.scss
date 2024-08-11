@@ -7,7 +7,7 @@
 
   @media (width <= $breakpoint-mob){
     margin: 16rem 0 64rem;
-    padding: 34rem 0 0;
+    padding: 98rem 0 0;
   }
 
   &::before{
@@ -22,6 +22,11 @@
     background-size: contain;
     transform: translateX(-50%);
     content: '';
+
+    @media (width <= $breakpoint-mob){
+      width: 20rem;
+      height: 20rem;
+    }
   }
 
   .slider {
@@ -29,7 +34,7 @@
     border-radius: 24rem;
 
     @media (width <= $breakpoint-mob){
-      height: 778rem;
+      height: 834rem;
     }
 
     .slide {
@@ -57,7 +62,7 @@
 
         @media (width <= $breakpoint-mob){
           order: 2;
-          margin: 69rem 0 0;
+          margin: 65rem 0 0;
           padding: 0;
         }
 
@@ -68,10 +73,8 @@
             font: var(--font-m-bold);
             font-size: 22rem;
 
-            @media (width <= $breakpoint-mob) {
-              background: linear-gradient(to right, var(--green), var(--green-light));
-              background-clip: text;
-              -webkit-text-fill-color: transparent;
+            @media (width <= $breakpoint-mob){
+              font: var(--font-s-bold);
             }
           }
 
@@ -81,7 +84,7 @@
             font: var(--font-m-v);
 
             @media (width <= $breakpoint-mob){
-              margin: 16rem 0 0;
+              margin: 30rem 0 0;
             }
           }
 
@@ -89,7 +92,7 @@
             margin: 40rem 0 0;
 
             @media (width <= $breakpoint-mob){
-              margin: 16rem 0 0;
+              margin: 32rem 0 0;
             }
           }
         }
@@ -101,6 +104,7 @@
 
         @media (width <= $breakpoint-mob){
           position: relative;
+          justify-content: center;
           order: 1;
         }
 
@@ -115,7 +119,9 @@
 
           @media (width <= $breakpoint-mob){
             width: 203rem;
-            height: 393rem;
+            height: 400rem;
+            margin: 0;
+            border-radius: 26rem;
           }
 
           &__video{
@@ -125,6 +131,10 @@
             object-position: center;
             border: 5rem solid transparent;
             border-radius: 48rem;
+
+            @media (width <= $breakpoint-mob){
+              border-radius: 26rem;
+            }
           }
         }
       }
