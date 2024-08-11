@@ -1,7 +1,7 @@
 @import '@/app/styles/variables/breakpoints';
 
 .demo{
-  margin: 0 0 80rem;
+  margin: 45rem 0 107rem;
 
   @media (width <= $breakpoint-mob) {
     margin: 0 0 40rem;
@@ -11,7 +11,7 @@
     &_text{
       position: relative;
       max-width: 380rem;
-      margin: 0 auto 40rem;
+      margin: 0 auto 35rem;
       padding: 0 24rem;
       color: var(--grey-light);
       font: var(--font-m);
@@ -19,6 +19,8 @@
 
       @media (width <= $breakpoint-mob) {
         margin: 0 auto 21rem;
+        padding: 0;
+        text-align: initial;
       }
 
       &::before{
@@ -37,7 +39,7 @@
 
     &_square{
       position: relative;
-      height: 776rem;
+      height: 790rem;
       border-radius: 32rem;
 
       @media (width <= $breakpoint-mob) {

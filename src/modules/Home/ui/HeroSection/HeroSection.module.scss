@@ -6,8 +6,9 @@
   min-height: calc(100vh - 84rem);
 
   @media (width <= $breakpoint-mob) {
+    align-items: initial;
     min-height: initial;
-    padding: 65rem 0 88rem;
+    padding: 40rem 0 32rem;
   }
 
   &__content{
@@ -16,12 +17,20 @@
     background-color: var(--light-black);
     border-radius: 24rem;
 
+    @media (width <= $breakpoint-mob){
+      flex-direction: column;
+      padding: 0;
+      background-color: initial;
+    }
+
     &_left{
       flex: 1 0 669rem;
 
-      .title{
-        margin: 0 0 39rem;
+      @media (width <= $breakpoint-mob){
+        flex: initial;
+      }
 
+      .title{
         @media (width <= $breakpoint-mob) {
           margin: 0 0 32rem;
         }
@@ -34,21 +43,45 @@
       align-items: center;
       justify-content: center;
       margin: 0 0 0 58rem;
+      padding: 30rem 0 0;
       text-align: center;
+
+      @media (width <= $breakpoint-mob){
+        align-items: flex-start;
+        margin: 0;
+        padding: 0;
+        text-align: initial;
+      }
 
       .image{
         width: 300rem;
         height: 90rem;
         margin: 0 0 10rem;
+
+        @media (width <= $breakpoint-mob){
+          order: 2;
+          width: 170rem;
+          height: 48rem;
+          margin: 0 0 32rem;
+        }
       }
 
-      p {
+      .text {
         margin: 20rem 0 0;
         font-size: 20rem;
         line-height: 130%;
 
         @media (width <= $breakpoint-mob) {
-          font-size: 16rem;
+          font-size: 18rem;
+
+          &.topDescription{
+            order: 1;
+            margin: 0 0 32rem;
+          }
+
+          &.bottomDescription{
+            display: none;
+          }
         }
       }
 
@@ -56,7 +89,8 @@
         margin: 40rem 0 0;
 
         @media (width <= $breakpoint-mob) {
-          margin: 32rem 0 0;
+          order: 3;
+          margin:0;
         }
       }
     }

@@ -4,7 +4,7 @@
 
   // BODY
   --font-m: 400 18rem / 130% var(--font-family-secondary);
-  --font-m-v: 400 20rem / 130% var(--font-family-secondary);
+  --font-m-v: 400 20rem / 120% var(--font-family-secondary);
   --font-m-bold: 700 18rem / 150% var(--font-family-secondary);
   --font-s: 400 16rem / 150% var(--font-family-secondary);
   --font-s-bold: 700 16rem / 150% var(--font-family-secondary);
@@ -33,11 +33,10 @@
 @media (width <= $breakpoint-mob) {
   :root {
     // HEADINGS
-    --font-h1: 700 56rem / 110% var(--font-family-primary);
+    --font-h1: 700 55rem / 110% var(--font-family-primary);
 
     // BODY
-    --font-m: 400 16rem / 130% var(--font-family-secondary);
-    --font-m-v: 400 16rem / 130% var(--font-family-secondary);
+    --font-m-v: 400 16rem / 120% var(--font-family-secondary);
     --font-m-bold: 700 18rem / 130% var(--font-family-secondary);
     --font-s: 400 16rem / 130% var(--font-family-secondary);
     --font-s-bold: 700 16rem / 130% var(--font-family-secondary);

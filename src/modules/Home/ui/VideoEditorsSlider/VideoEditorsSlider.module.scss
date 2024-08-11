@@ -62,13 +62,7 @@
         }
 
         &_content {
-          .title{
-            @media (width <= $breakpoint-mob) {
-              background: linear-gradient(to right, var(--green), var(--green-light));
-              background-clip: text;
-              -webkit-text-fill-color: transparent;
-            }
-          }
+          padding: 0 0 10rem;
 
           .topic {
             font: var(--font-m-bold);
@@ -82,8 +76,9 @@
           }
 
           .text {
-            max-width: 392rem;
+            max-width: 395rem;
             margin: 40rem 0 0;
+            font: var(--font-m-v);
 
             @media (width <= $breakpoint-mob){
               margin: 16rem 0 0;
@@ -103,7 +98,6 @@
       &__right {
         display: flex;
         align-items: center;
-        justify-content: center;
 
         @media (width <= $breakpoint-mob){
           position: relative;
@@ -112,8 +106,9 @@
 
         .square {
           position: relative ;
-          width: 305rem;
-          height: 591rem;
+          width: 315rem;
+          height: 605rem;
+          margin: 0 0 0 110rem;
           overflow: hidden;
           background: var(--gradient);
           border-radius: 48rem;

@@ -50,7 +50,7 @@ const VideoEditorsSlider = () => {
                 <div className={styles['slide__left_content']}>
                   <p className={styles['topic']}>{slide.topic}</p>
                   <h3 className={classNames('h1', styles['title'])}>
-                    {slide.title}
+                    <span>{slide.title}</span>
                   </h3>
                   <p className={styles['text']}>{slide.description}</p>
                   <PrimaryButton
