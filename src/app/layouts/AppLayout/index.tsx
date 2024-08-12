@@ -1,6 +1,6 @@
 import { FC, ReactNode } from 'react'
-// import Footer from '@/components/Footer'
 import Header from '@/components/Header/ui/Header'
+import { Footer } from '@/components/Footer'
 
 type AppLayoutProps = {
   children: ReactNode
@@ -12,7 +12,7 @@ const AppLayout: FC<AppLayoutProps> = ({ children }) => {
       <Header />
       <div className={'root'} />
       {children}
-      {/*<Footer />*/}
+      <Footer />
     </>
   )
 }

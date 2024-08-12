@@ -1,0 +1,29 @@
+@import '@/app/styles/variables/breakpoints';
+
+.footer{
+  padding: 100rem 0 220rem;
+  background-color: var(--light-black);
+
+  &__content{
+    display: flex;
+
+    .social{
+      flex: 1 0 246rem;
+
+      &__title{
+        margin: 0 0 16rem;
+      }
+
+      &__link{
+        font-size: 22rem;
+        transition:color var(--duration) var(--ease);
+
+        @media (width> $breakpoint-mob) {
+          &:hover{
+            color: var(--green);
+          }
+        }
+      }
+    }
+  }
+}
