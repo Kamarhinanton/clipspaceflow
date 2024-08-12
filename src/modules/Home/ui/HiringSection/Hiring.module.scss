@@ -1,0 +1,115 @@
+@import '@/app/styles/variables/breakpoints';
+
+.hiring {
+  margin: 250rem 0;
+
+  @media (width<=$breakpoint-mob) {
+    margin: 130rem 0 120rem;
+  }
+
+  &__content {
+    display: flex;
+
+    @media (width<=$breakpoint-mob) {
+      flex-direction: column;
+    }
+
+    &_left {
+      position: relative;
+      max-width: 352rem;
+      margin: 0 143rem 0 0;
+
+      @media (width<=$breakpoint-mob) {
+        max-width: initial;
+      }
+
+      &::before {
+        position: absolute;
+        top: 0;
+        left: -200rem;
+        z-index: -1;
+        width: 700rem;
+        height: 700rem;
+        background-image: url("/images/gradients/gradient_hiringSection.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        content: '';
+
+        @media (width<=$breakpoint-mob) {
+          display: none;
+        }
+      }
+
+      .img {
+        width: 98rem;
+        height: 98rem;
+        margin: 40rem 0 0;
+
+        @media (width<=$breakpoint-mob) {
+          width: 72rem;
+          height: 72rem;
+          margin: 15rem 0 0;
+        }
+      }
+    }
+
+    .list {
+      display: flex;
+      flex-direction: column;
+      gap: 24rem;
+      width: 100%;
+      margin: 20rem 0 0;
+
+      @media (width<=$breakpoint-mob) {
+        margin: 32rem 0 0;
+      }
+
+      &__item {
+        position: relative;
+        padding: 89rem 64rem 113rem;
+        background-color: var(--light-black);
+        border-radius: 24rem;
+
+        @media (width<=$breakpoint-mob) {
+          padding: 214rem 16rem 40rem;
+
+        }
+
+        &_text {
+          max-width: 248rem;
+          font: var(--font-m-v);
+
+          @media (width<=$breakpoint-mob) {
+            max-width: 100%;
+          }
+        }
+
+        &_img {
+          position: absolute;
+          top: 11rem;
+          right: 40rem;
+          width: 383rem;
+          height: 228rem;
+
+          @media (width<=$breakpoint-mob) {
+            top: 40rem;
+            right: 50%;
+            width: 302rem;
+            height: 139rem;
+            transform: translateX(50%);
+          }
+
+
+          img {
+            object-position: right;
+
+            @media (width<=$breakpoint-mob) {
+              object-position: top;
+            }
+          }
+        }
+      }
+    }
+  }
+}
