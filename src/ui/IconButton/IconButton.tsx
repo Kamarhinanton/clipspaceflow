@@ -1,8 +1,8 @@
 import React, { FC, ReactNode } from 'react'
 import Link from 'next/link'
+import classNames from 'classnames'
 
 import styles from './IconButton.module.scss'
-import classNames from 'classnames'
 
 type IconButtonType = {
   title: string

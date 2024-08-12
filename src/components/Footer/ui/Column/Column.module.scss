@@ -10,11 +10,20 @@
     flex-direction: column;
     width: 167rem;
 
+    @media (width <= $breakpoint-mob) {
+      width: 100%;
+    }
+
     &_link {
       margin: 0 0 16rem;
       color: var(--grey-light);
       font-size: 22rem;
       transition: color var(--duration) var(--ease);
+
+      @media (width <= $breakpoint-mob) {
+        margin: 0 0 27rem;
+        font-size: 18rem;
+      }
 
       &:last-child {
         margin: 0;

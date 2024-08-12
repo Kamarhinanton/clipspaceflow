@@ -14,6 +14,7 @@ const swiperProps: SwiperProps = {
   speed: 2000,
   loop: true,
   autoplay: true,
+  allowTouchMove: false,
   slidesPerView: 1,
   pagination: {
     el: '.current-pagination',
