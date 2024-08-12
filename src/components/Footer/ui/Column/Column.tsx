@@ -19,10 +19,16 @@ type ColumnFooterType = {
 const Column: FC<ColumnFooterType> = ({ links, title, className }) => {
   return (
     <div className={classNames(styles['column'], className)}>
-      {title && <h2>{title}</h2>}
-      <nav>
+      {title && (
+        <h2 className={classNames('h2', styles['column__title'])}>{title}</h2>
+      )}
+      <nav className={styles['column__navigation']}>
         {links.map((link) => (
-          <Link key={link.id} href={link.href}>
+          <Link
+            className={styles['column__navigation_link']}
+            key={link.id}
+            href={link.href}
+          >
             {link.title}
           </Link>
         ))}

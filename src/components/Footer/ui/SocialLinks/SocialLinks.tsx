@@ -1,7 +1,6 @@
 import React, { FC } from 'react'
 import { socialLinks } from '@/components/Footer/ui/SocialLinks/data'
 import Link from 'next/link'
-import { BackgroundImage } from '@/ui/BackgroundImage/BackgroundImage'
 import classNames from 'classnames'
 
 import styles from './SocialLinks.module.scss'

@@ -1,12 +1,28 @@
-.logos{
-  display: flex;
+@import '@/app/styles/variables/breakpoints';
 
-  &__link{
-    flex: 0 0 39rem;
+.logos {
+  &__link {
+    display: inline-block;
+    width: 39rem;
     height: 39rem;
+    margin: 0 24rem 0 0;
 
-    &_img{
+    &:last-child {
+      margin: 0;
+    }
 
+    svg {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transition: var(--duration) var(--ease);
+      fill: var(--white);
+
+      @media (width > $breakpoint-mob) {
+        &:hover {
+          fill: var(--green);
+        }
+      }
     }
   }
 }

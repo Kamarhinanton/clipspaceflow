@@ -1,14 +1,16 @@
 @import '@/app/styles/variables/breakpoints';
 
 .footer{
-  padding: 100rem 0 220rem;
+  padding: 92rem 0 220rem;
   background-color: var(--light-black);
 
   &__content{
     display: flex;
 
     .social{
-      flex: 1 0 246rem;
+      display: flex;
+      flex-direction: column;
+      margin: 0 120rem 0 0;
 
       &__title{
         margin: 0 0 16rem;
@@ -16,13 +18,36 @@
 
       &__link{
         font-size: 22rem;
-        transition:color var(--duration) var(--ease);
+        transition: color var(--duration) var(--ease);
 
         @media (width> $breakpoint-mob) {
           &:hover{
             color: var(--green);
           }
         }
+      }
+
+      &__logos{
+        margin: 16rem 0 0;
+      }
+    }
+
+    .columns{
+      display: flex;
+      gap: 20rem;
+    }
+
+    .join{
+      display: flex;
+      flex-direction: column;
+      gap: 16rem;
+      align-items: center;
+      margin: 5rem 0 0 auto;
+
+      &__text{
+        max-width: 349rem;
+        color: var(--grey-light);
+        font: var(--font-m-v);
       }
     }
   }

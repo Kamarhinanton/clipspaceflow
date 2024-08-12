@@ -1,1 +1,30 @@
-.column{}
+@import '@/app/styles/variables/breakpoints';
+
+.column {
+  &__title {
+    margin: 0 0 16rem;
+  }
+
+  &__navigation {
+    display: flex;
+    flex-direction: column;
+    width: 167rem;
+
+    &_link {
+      margin: 0 0 16rem;
+      color: var(--grey-light);
+      font-size: 22rem;
+      transition: color var(--duration) var(--ease);
+
+      &:last-child {
+        margin: 0;
+      }
+
+      @media (width> $breakpoint-mob) {
+        &:hover {
+          color: var(--green);
+        }
+      }
+    }
+  }
+}

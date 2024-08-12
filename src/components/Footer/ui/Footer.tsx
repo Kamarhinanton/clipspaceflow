@@ -5,6 +5,9 @@ import classNames from 'classnames'
 import Column from '@/components/Footer/ui/Column/Column'
 import SocialLinks from '@/components/Footer/ui/SocialLinks/SocialLinks'
 import { legalLinks, teamLinks } from '@/components/Footer/ui/Column/data'
+import IconButton from '@/ui/IconButton/IconButton'
+import IconX from '../../../../public/icons/social/x.svg'
+import IconAI from '../../../../public/icons/social/ai.svg'
 
 import styles from './Footer.module.scss'
 
@@ -24,14 +27,20 @@ const Footer = () => {
             >
               hello@clipspace.co
             </Link>
-            <SocialLinks />
+            <SocialLinks className={styles['social__logos']} />
           </div>
-          <Column links={teamLinks} title={'TEAM'} />
-          <Column links={legalLinks} title={'LEGAL'} />
-          <div>
-            <Link href={'/'}>Follow us on X</Link>
-            <Link href={'/'}>Join our Beta</Link>
-            <p>
+          <div className={styles['columns']}>
+            <Column links={teamLinks} title={'TEAM'} />
+            <Column links={legalLinks} title={'LEGAL'} />
+          </div>
+          <div className={styles['join']}>
+            <IconButton title={'Follow us on X'} href={'/'}>
+              <IconX />
+            </IconButton>
+            <IconButton title={'Join our Beta'} href={'/'}>
+              <IconAI />
+            </IconButton>
+            <p className={styles['join__text']}>
               We are still fine tuning our product and would love to get your
               feedback.
             </p>
