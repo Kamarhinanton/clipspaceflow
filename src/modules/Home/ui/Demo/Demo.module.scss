@@ -1,14 +1,35 @@
 @import '@/app/styles/variables/breakpoints';
 
-.demo{
+.demo {
   margin: 45rem 0 107rem;
 
   @media (width <= $breakpoint-mob) {
     margin: 0 0 40rem;
   }
 
-  &__content{
-    &_text{
+  &__content {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      top: -100rem;
+      left: -300rem;
+      z-index: -1;
+      width: 1510rem;
+      height: 1150rem;
+      background-image: url("/images/gradients/gradient_demo.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      content: '';
+      pointer-events: none;
+
+      @media (width <= $breakpoint-mob) {
+       display: none;
+      }
+    }
+
+    &_text {
       position: relative;
       max-width: 380rem;
       margin: 0 auto 35rem;
@@ -23,7 +44,7 @@
         text-align: initial;
       }
 
-      &::before{
+      &::before {
         position: absolute;
         right: 0;
         bottom: -6rem;
@@ -37,37 +58,12 @@
       }
     }
 
-    &_square{
+    &_square {
       position: relative;
       height: 790rem;
-      border-radius: 32rem;
 
       @media (width <= $breakpoint-mob) {
         height: 236rem;
-        border-radius: 12rem;
-      }
-
-      &::before{
-        position: absolute;
-        top: -200rem;
-        left: -300rem;
-        z-index: -1;
-        width: 1510rem;
-        height: 1150rem;
-        background-image: url("/images/gradients/gradient_demo.png");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
-        content: '';
-        pointer-events: none;
-
-        @media (width <= $breakpoint-mob) {
-          top: -200rem;
-          left: -100rem;
-          width: 650rem;
-          height: 500rem;
-          background-image: url("/images/gradients/gradient_demo_mob.png");
-        }
       }
     }
   }

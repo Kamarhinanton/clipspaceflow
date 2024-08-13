@@ -1,21 +1,9 @@
 import React from 'react'
 import Container from '@/app/layouts/Container'
 import { BackgroundImage } from '@/ui/BackgroundImage/BackgroundImage'
+import { listContent } from '@/modules/Home/ui/HiringSection/data'
 
 import styles from './Hiring.module.scss'
-
-const listContent = [
-  {
-    description: 'Finding available creators is very challenging.',
-    src: '/images/hiringSection/1.png',
-    id: 1,
-  },
-  {
-    description: 'It’s very hard to find qualified niche creators.',
-    src: '/images/hiringSection/2.svg',
-    id: 2,
-  },
-]
 
 const HiringSection = () => {
   return (
