@@ -1,7 +1,7 @@
 @import '@/app/styles/variables/breakpoints';
 
 .hiring {
-  margin: 250rem 0;
+  margin: 250rem 0 240rem;
 
   @media (width<=$breakpoint-mob) {
     margin: 130rem 0 120rem;

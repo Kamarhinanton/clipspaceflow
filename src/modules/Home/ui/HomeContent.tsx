@@ -5,6 +5,7 @@ import SliderLogo from '@/modules/Home/ui/SliderLogo/SliderLogo'
 import SliderLogoRevers from '@/modules/Home/ui/SliderLogoRevers/SliderLogoRevers'
 import VideoEditorsSlider from '@/modules/Home/ui/VideoEditorsSlider/VideoEditorsSlider'
 import HiringSection from '@/modules/Home/ui/HiringSection/HiringSection'
+import MakeIt from '@/modules/Home/ui/MakeIt/MakeIt'
 
 const HomeContent = () => {
   return (
@@ -15,6 +16,7 @@ const HomeContent = () => {
       <SliderLogoRevers />
       <VideoEditorsSlider />
       <HiringSection />
+      <MakeIt />
     </main>
   )
 }
