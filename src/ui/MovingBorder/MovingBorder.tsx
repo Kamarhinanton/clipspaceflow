@@ -10,7 +10,9 @@ type MovingBorderType = {
 const MovingBorder: FC<MovingBorderType> = ({ children, className }) => {
   return (
     <div className={classNames(styles['border'], className)}>
-      <div className={styles['border__content']}>{children}</div>
+      <div className={styles['border__content']}>
+        <div className={styles['border__content_inner']}>{children}</div>
+      </div>
     </div>
   )
 }

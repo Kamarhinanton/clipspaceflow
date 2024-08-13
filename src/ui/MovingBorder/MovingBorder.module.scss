@@ -1,4 +1,6 @@
-.border{
+@import '@/app/styles/variables/breakpoints';
+
+.border {
   position: relative;
   display: flex;
   align-items: center;
@@ -7,12 +9,24 @@
   background-color: var(--grey);
   border-radius: 24px;
 
-  &__content{
+  &__content {
     position: absolute;
     z-index: 2;
-    background-color: var(--black);
+    background-image: var(--gradient);
     border-radius: 21px;
     inset: 3px;
+
+    &_inner {
+      position: absolute;
+      inset: 8px;
+      background-color: var(--black);
+      border-radius: 13px;
+
+      @media (width<= $breakpoint-mob) {
+        inset: 5px;
+        border-radius: 16px;
+      }
+    }
   }
 
   &::before {

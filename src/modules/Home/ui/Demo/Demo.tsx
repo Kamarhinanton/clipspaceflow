@@ -13,7 +13,7 @@ const Demo = () => {
             One platform to hire and manage short-form video creators. Watch
             demo
           </p>
-          <MovingBorder className={styles['demo__content_square']}>
+          <MovingBorder className={styles['square']}>
             <div></div>
           </MovingBorder>
         </div>
