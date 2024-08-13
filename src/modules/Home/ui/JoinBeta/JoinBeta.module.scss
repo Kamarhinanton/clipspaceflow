@@ -1,0 +1,74 @@
+@import '@/app/styles/variables/breakpoints';
+
+.joinBeta {
+  margin: 289rem 0 246rem;
+
+  @media (width<= $breakpoint-mob) {
+    margin: 120rem 0;
+  }
+
+  .title{
+    &::before {
+      top: -30rem;
+      left: 140rem;
+
+      @media (width<= $breakpoint-mob) {
+        top: -20rem;
+        left: 85rem;
+        width: 24rem;
+        height: 24rem;
+      }
+    }
+
+    @media (width<= $breakpoint-mob) {
+      max-width: 287rem;
+      margin: 0 0 32rem;
+    }
+  }
+
+  &__content {
+    display: flex;
+
+    @media (width<= $breakpoint-mob) {
+      flex-direction: column;
+    }
+
+    &_text {
+      position: relative;
+
+      @media (width<= $breakpoint-mob) {
+        order: 2;
+      }
+
+      .description {
+        max-width: 332rem;
+        margin: 40rem 0 0;
+        font: var(--font-m-v);
+      }
+
+      .button {
+        margin: 40rem 0 0;
+      }
+    }
+
+    &_video {
+      flex: 0 0 770rem;
+      height: 548rem;
+      margin: 0 0 0 68rem;
+
+      @media (width<= $breakpoint-mob) {
+        flex: initial;
+        order: 1;
+        width: 100%;
+        height: 284rem;
+        margin: initial;
+      }
+
+      video {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+}

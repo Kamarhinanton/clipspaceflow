@@ -11,22 +11,9 @@
   }
 
   &::before{
-    position: absolute;
     top: 0;
     left: 50%;
-    width: 32rem;
-    height: 32rem;
-    background-image: url("/icons/decor_star.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
     transform: translateX(-50%);
-    content: '';
-
-    @media (width <= $breakpoint-mob){
-      width: 20rem;
-      height: 20rem;
-    }
   }
 
   .slider {

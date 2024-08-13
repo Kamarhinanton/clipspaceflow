@@ -39,7 +39,7 @@ const VideoEditorsSlider = () => {
   const videoRef = useRef<HTMLVideoElement | null>(null)
 
   return (
-    <section className={styles['videoEditorsSlider']}>
+    <section className={classNames(styles['videoEditorsSlider'], 'decor-star')}>
       <Container>
         <Swiper {...swiperProps} className={styles['slider']}>
           <div className="current-pagination" />
