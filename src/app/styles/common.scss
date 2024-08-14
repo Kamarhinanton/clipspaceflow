@@ -123,3 +123,100 @@ main {
     }
   }
 }
+
+.editor-content {
+  position: relative;
+  h1, h2, h3, h4, h5, h6 {
+    margin: 68rem 0 40rem;
+
+    @media (width<= $breakpoint-mob) {
+      margin: 64rem 0 34rem;
+    }
+  }
+
+  p {
+    margin: 15rem 0;
+
+    @media (width<= $breakpoint-mob) {
+      margin: 10rem 0;
+    }
+  }
+
+  ul, ol {
+    margin: 24rem 0;
+  }
+
+  ul {
+    li {
+      position: relative;
+      margin: 10rem 0;
+      font: var(--font-m);
+      padding: 0 0 0 20rem;
+
+      &::before {
+        position: absolute;
+        top: 7rem;
+        left: 0;
+        width: 10rem;
+        height: 10rem;
+        background-color: var(--white);
+        border-radius: 50%;
+        content: '';
+
+        @media (width<= $breakpoint-mob) {
+          top: 7rem;
+          left: 5rem;
+          width: 5rem;
+          height: 5rem;
+        }
+      }
+    }
+  }
+
+  ol {
+    counter-reset: ordered-list-counter;
+
+    li {
+      margin: 10rem 0;
+      font: var(--font-m);
+      counter-increment: ordered-list-counter;
+
+      @media (width<= $breakpoint-mob) {
+        position: relative;
+        padding: 0 0 0 20rem;
+        font-size: 14rem;
+      }
+
+      &::before {
+        margin: 0 10rem 0 0;
+        content: counter(ordered-list-counter) ".";
+
+        @media (width<= $breakpoint-mob) {
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+
+  a {
+    display: block;
+    color: var(--green);
+    font: var(--font-m);
+    transition: opacity var(--duration-hover) var(--ease);
+    @media (width> $breakpoint-mob) {
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
+.wrapper-class {
+  padding: 30rem 0 50rem;
+
+  @media (width<= $breakpoint-mob) {
+    padding: 20rem 0 40rem;
+  }
+}

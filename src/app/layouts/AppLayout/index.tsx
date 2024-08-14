@@ -1,5 +1,4 @@
 import { FC, ReactNode } from 'react'
-import Header from '@/components/Header/ui/Header'
 import { Footer } from '@/components/Footer'
 
 type AppLayoutProps = {
@@ -9,8 +8,6 @@ type AppLayoutProps = {
 const AppLayout: FC<AppLayoutProps> = ({ children }) => {
   return (
     <>
-      <Header />
-      <div className={'root'} />
       {children}
       <Footer />
     </>

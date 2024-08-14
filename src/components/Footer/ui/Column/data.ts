@@ -1,3 +1,5 @@
+import routes from '@/utils/routes'
+
 export const teamLinks = [
   {
     href: 'mailto:hello@clipspace.co',
@@ -15,17 +17,17 @@ export const teamLinks = [
 
 export const legalLinks = [
   {
-    href: '/',
+    href: routes.public.privacy,
     title: 'Privacy Policy',
     id: 1,
   },
   {
-    href: '/',
+    href: routes.public.cookies,
     title: 'Cookie Policy',
     id: 2,
   },
   {
-    href: '/',
+    href: routes.public.terms,
     title: 'Terms of Service',
     id: 3,
   },

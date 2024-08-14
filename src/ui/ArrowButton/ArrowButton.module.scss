@@ -1,0 +1,22 @@
+.arrowButton {
+  position: relative;
+  width: 148rem;
+  height: 48rem;
+  background-color: var(--black);
+  border: 1px solid var(--secondary);
+  border-radius: 600px;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 41rem;
+    height: 31rem;
+    background-image: url("/icons/arrow-back.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transform: translateY(-50%) translateX(-50%);
+    content: '';
+  }
+}

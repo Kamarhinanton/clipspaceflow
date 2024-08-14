@@ -9,21 +9,26 @@ import MakeIt from '@/modules/Home/ui/MakeIt/MakeIt'
 import JoinBeta from '@/modules/Home/ui/JoinBeta/JoinBeta'
 import FAQSection from '@/modules/Home/ui/FAQSection/FAQSection'
 import RunningText from '@/modules/Home/ui/RunningText/RunningText.module'
+import Header from '../../../components/Header/ui/Header'
 
 const HomeContent = () => {
   return (
-    <main>
-      <HeroSection />
-      <Demo />
-      <SliderLogo />
-      <SliderLogoRevers />
-      <VideoEditorsSlider />
-      <HiringSection />
-      <MakeIt />
-      <JoinBeta />
-      <FAQSection />
-      <RunningText />
-    </main>
+    <>
+      <Header />
+      <div className={'root'} />
+      <main>
+        <HeroSection />
+        <Demo />
+        <SliderLogo />
+        <SliderLogoRevers />
+        <VideoEditorsSlider />
+        <HiringSection />
+        <MakeIt />
+        <JoinBeta />
+        <FAQSection />
+        <RunningText />
+      </main>
+    </>
   )
 }
 
