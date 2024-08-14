@@ -37,7 +37,10 @@ const swiperProps: SwiperProps = {
 
 const VideoEditorsSlider = () => {
   return (
-    <section className={classNames(styles['videoEditorsSlider'], 'decor-star')}>
+    <section
+      id={'paragraph-3'}
+      className={classNames(styles['videoEditorsSlider'], 'decor-star')}
+    >
       <Container>
         <Swiper {...swiperProps} className={styles['slider']}>
           <div className="current-pagination" />

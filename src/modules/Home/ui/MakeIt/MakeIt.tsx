@@ -10,7 +10,7 @@ import lottie1 from './data/1.json'
 
 const MakeIt = () => {
   return (
-    <section className={styles['makeIt']}>
+    <section id={'paragraph-2'} className={styles['makeIt']}>
       <Container size={'large'}>
         <div className={styles['makeIt__content']}>
           <div className={styles['title']}>

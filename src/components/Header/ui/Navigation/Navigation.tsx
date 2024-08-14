@@ -1,11 +1,31 @@
-import React from 'react'
+import React, { FC } from 'react'
 import Link from 'next/link'
 import { headerNavigationLinks } from '@/components/Header/ui/Navigation/data'
+import classNames from 'classnames'
+import useWindowDimensions from '@/hooks/useWindowDimensions'
+import { breakpointMob } from '@/utils/variables'
 
 import styles from './Navigation.module.scss'
-import classNames from 'classnames'
 
-const Navigation = () => {
+export type NavigationType = {
+  setOpened?: (opened: boolean) => void
+}
+
+const Navigation: FC<NavigationType> = ({ setOpened }) => {
+  const { width } = useWindowDimensions()
+  const handleItemClick = (itemId: number) => {
+    const paragraphId = `paragraph-${itemId}`
+    const paragraphElement = document.getElementById(paragraphId)
+
+    if (paragraphElement) {
+      paragraphElement.scrollIntoView({ behavior: 'smooth' })
+    }
+
+    if (width <= breakpointMob && setOpened) {
+      setOpened(false)
+    }
+  }
+
   return (
     <nav className={styles['navigation']}>
       {headerNavigationLinks.map((link) => (
@@ -14,6 +34,7 @@ const Navigation = () => {
             styles['navigation__link'],
             !link.desktop && [styles['desktopHidden']],
           )}
+          onClick={() => handleItemClick(link.id)}
           key={link.id}
           href={link.href}
         >

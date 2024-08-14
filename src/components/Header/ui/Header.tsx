@@ -51,7 +51,9 @@ const Header = () => {
           </div>
           {width <= breakpointMob && (
             <>
-              <AnimatePresence>{opened && <MobileSubmenu />}</AnimatePresence>
+              <AnimatePresence>
+                {opened && <MobileSubmenu setOpened={setOpened} />}
+              </AnimatePresence>
               <Burger opened={opened} toggleMenu={toggleMenu} />
             </>
           )}

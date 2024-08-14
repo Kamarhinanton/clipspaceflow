@@ -6,7 +6,7 @@
   left: 0;
   z-index: 10;
   width: 100%;
-  background-color: var(--black);
+  background-color: rgb(#000, 0.7);
 
   @media (width<=$breakpoint-mob) {
     &::before {
