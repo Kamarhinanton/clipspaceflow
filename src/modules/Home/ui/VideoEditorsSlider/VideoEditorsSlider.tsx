@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React from 'react'
 import Container from '@/app/layouts/Container'
 import PrimaryButton from '@/ui/PrimaryButon'
 import classNames from 'classnames'
@@ -18,7 +18,7 @@ const swiperProps: SwiperProps = {
   slidesPerView: 1,
   pagination: {
     el: '.current-pagination',
-    clickable: true,
+    clickable: false,
     verticalClass: styles['pagination'],
     bulletClass: styles['pagination__bullet'],
     bulletActiveClass: styles['active'],
@@ -36,8 +36,6 @@ const swiperProps: SwiperProps = {
 }
 
 const VideoEditorsSlider = () => {
-  const videoRef = useRef<HTMLVideoElement | null>(null)
-
   return (
     <section className={classNames(styles['videoEditorsSlider'], 'decor-star')}>
       <Container>
@@ -73,7 +71,6 @@ const VideoEditorsSlider = () => {
                     autoPlay={true}
                     loop={true}
                     muted={true}
-                    ref={videoRef}
                     controls={false}
                   >
                     <source src={slide.videoSrc} type="video/mp4" />

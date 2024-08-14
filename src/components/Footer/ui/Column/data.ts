@@ -1,13 +1,15 @@
 export const teamLinks = [
   {
-    href: '/',
+    href: 'mailto:hello@clipspace.co',
     title: 'Contact',
     id: 1,
+    targetBlank: true,
   },
   {
-    href: '/',
+    href: 'https://calendly.com/clipspace/30min',
     title: 'Book a meeting with CEO',
     id: 2,
+    targetBlank: true,
   },
 ]
 

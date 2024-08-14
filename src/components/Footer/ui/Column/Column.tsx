@@ -8,6 +8,7 @@ type ColumnLinks = {
   id: number
   title?: string
   href: string
+  targetBlank?: boolean
 }
 
 type ColumnFooterType = {
@@ -25,6 +26,7 @@ const Column: FC<ColumnFooterType> = ({ links, title, className }) => {
       <nav className={styles['column__navigation']}>
         {links.map((link) => (
           <Link
+            target={link.targetBlank ? '_blank' : ''}
             className={styles['column__navigation_link']}
             key={link.id}
             href={link.href}

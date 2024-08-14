@@ -4,22 +4,22 @@ import Youtube from '../../../../../public/icons/social/youtube.svg'
 import TT from '../../../../../public/icons/social/tt.svg'
 export const socialLinks = [
   {
-    href: '/',
+    href: 'https://www.instagram.com/clipspace.co',
     imageSrc: <Instagram />,
     id: 1,
   },
   {
-    href: '/',
+    href: 'https://www.linkedin.com/company/clipspace/',
     imageSrc: <Linkedin />,
     id: 2,
   },
   {
-    href: '/',
+    href: 'https://www.youtube.com/@helloClipspace',
     imageSrc: <Youtube />,
     id: 3,
   },
   {
-    href: '/',
+    href: 'https://www.tiktok.com/@clip.space',
     imageSrc: <TT />,
     id: 4,
   },

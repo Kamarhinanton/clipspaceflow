@@ -1,12 +1,15 @@
+import notification from './notification.json'
+import radar from './radar.json'
+
 export const listContent = [
   {
     description: 'Finding available creators is very challenging.',
-    src: '/images/hiringSection/1.png',
+    src: notification,
     id: 1,
   },
   {
     description: 'It’s very hard to find qualified niche creators.',
-    src: '/images/hiringSection/2.svg',
+    src: radar,
     id: 2,
   },
 ]

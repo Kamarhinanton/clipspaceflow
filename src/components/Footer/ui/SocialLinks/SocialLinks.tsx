@@ -13,7 +13,12 @@ const SocialLinks: FC<SocialLinksType> = ({ className }) => {
   return (
     <nav className={classNames(styles['logos'], className)}>
       {socialLinks.map((link) => (
-        <Link className={styles['logos__link']} key={link.id} href={link.href}>
+        <Link
+          target="_blank"
+          className={styles['logos__link']}
+          key={link.id}
+          href={link.href}
+        >
           {link.imageSrc}
         </Link>
       ))}

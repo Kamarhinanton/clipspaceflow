@@ -34,7 +34,11 @@ const Footer = () => {
             <Column links={legalLinks} title={'LEGAL'} />
           </div>
           <div className={styles['join']}>
-            <IconButton title={'Follow us on X'} href={'/'}>
+            <IconButton
+              title={'Follow us on X'}
+              href={'https://x.com/HelloClipspace'}
+              targetBlank
+            >
               <IconX />
             </IconButton>
             <IconButton title={'Join our Beta'} href={'/'}>

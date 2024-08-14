@@ -9,6 +9,7 @@ type IconButtonType = {
   children: ReactNode
   href: string
   className?: string
+  targetBlank?: boolean
 }
 
 const IconButton: FC<IconButtonType> = ({
@@ -16,9 +17,14 @@ const IconButton: FC<IconButtonType> = ({
   href,
   children,
   className,
+  targetBlank = false,
 }) => {
   return (
-    <Link className={classNames(styles['iconButton'], className)} href={href}>
+    <Link
+      target={targetBlank ? '_blank' : ''}
+      className={classNames(styles['iconButton'], className)}
+      href={href}
+    >
       <div className={styles['iconButton__logo']}>{children}</div>
       {title}
     </Link>

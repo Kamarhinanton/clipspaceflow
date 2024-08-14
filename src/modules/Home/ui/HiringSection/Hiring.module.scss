@@ -41,7 +41,7 @@
         }
       }
 
-      .img {
+      .lottie {
         width: 98rem;
         height: 98rem;
         margin: 40rem 0 0;
@@ -73,7 +73,6 @@
 
         @media (width<=$breakpoint-mob) {
           padding: 214rem 16rem 40rem;
-
         }
 
         &_text {
@@ -85,7 +84,7 @@
           }
         }
 
-        &_img {
+        &_lottie {
           position: absolute;
           top: 11rem;
           right: 40rem;

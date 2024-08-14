@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React from 'react'
 import Container from '@/app/layouts/Container'
 import PrimaryButton from '@/ui/PrimaryButon'
 import classNames from 'classnames'
@@ -6,8 +6,6 @@ import classNames from 'classnames'
 import styles from './JoinBeta.module.scss'
 
 const JoinBeta = () => {
-  const videoRef = useRef<HTMLVideoElement | null>(null)
-
   return (
     <section className={styles['joinBeta']}>
       <Container>
@@ -48,7 +46,6 @@ const JoinBeta = () => {
               autoPlay={true}
               loop={true}
               muted={true}
-              ref={videoRef}
               controls={false}
             >
               <source src={'/videos/Desktop.mp4'} type="video/mp4" />
