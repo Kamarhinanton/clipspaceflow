@@ -1,0 +1,75 @@
+@import '@/app/styles/variables/breakpoints';
+
+.item {
+  &__title {
+    position: relative;
+    padding: 23rem 36rem;
+    color: var(--white);
+    font: var(--font-m-bold);
+    font-size: 22rem;
+    background-color: var(--light-black);
+    border-radius: 12rem;
+    cursor: pointer;
+
+    &.active {
+      &::before{
+        transform: translateY(-50%) rotateX(0deg);
+        opacity: 1;
+      }
+    }
+
+    &::before{
+      position: absolute;
+      top: 50%;
+      right: 24rem;
+      width: 19rem;
+      height: 13rem;
+      background-image: url("/icons/arrow-faq.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      transform: translateY(-50%) rotateX(180deg);
+      opacity: 0.5;
+      transition: var(--duration) var(--ease);
+      content: '';
+
+      //@media (max-width: $breakpoint-mob) {
+      //  top: 30rem;
+      //  transform: initial;
+      //  transition: initial;
+      //}
+
+    }
+
+  }
+
+  &__dropdownMenu {
+    &_description {
+      padding: 8rem 0 0;
+
+      .text {
+        padding: 23rem 36rem;
+        font: var(--font-m-v);
+        font-size: 22rem;
+        background-color: var(--light-black);
+        border-radius: 12rem;
+      }
+    }
+  }
+}
+
+@media (width <= $breakpoint-mob) {
+  .item {
+    &__title {
+      padding: 24rem 35rem 24rem 0;
+
+    }
+
+    &__dropdownMenu {
+      &_photoContainer {
+        width: 44rem;
+        height: 44rem;
+      }
+    }
+  }
+}

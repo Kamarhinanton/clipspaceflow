@@ -7,6 +7,7 @@ import VideoEditorsSlider from '@/modules/Home/ui/VideoEditorsSlider/VideoEditor
 import HiringSection from '@/modules/Home/ui/HiringSection/HiringSection'
 import MakeIt from '@/modules/Home/ui/MakeIt/MakeIt'
 import JoinBeta from '@/modules/Home/ui/JoinBeta/JoinBeta'
+import FAQSection from '@/modules/Home/ui/FAQSection/FAQSection'
 
 const HomeContent = () => {
   return (
@@ -19,6 +20,7 @@ const HomeContent = () => {
       <HiringSection />
       <MakeIt />
       <JoinBeta />
+      <FAQSection />
     </main>
   )
 }

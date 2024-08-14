@@ -1,0 +1,32 @@
+@import '@/app/styles/variables/breakpoints';
+
+.FAQSection{
+  display: flex;
+  margin: 246rem 0 240rem;
+
+  &__content{
+    &_top {
+      text-align: center;
+    }
+
+    &_bottom{
+      width: 100%;
+      margin: 40rem 0 0;
+
+      .list{
+        display: flex;
+        flex-direction: column;
+        gap: 16rem;
+        max-width: 1036rem;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+@media (width <= $breakpoint-mob) {
+  .FAQSection{
+    margin: 80rem 0;
+
+  }
+}
