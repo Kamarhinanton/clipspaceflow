@@ -1,32 +1,38 @@
 @import '@/app/styles/variables/breakpoints';
 
-.FAQSection{
+.FAQSection {
   display: flex;
   margin: 246rem 0 240rem;
 
-  &__content{
+  @media (width <= $breakpoint-mob) {
+    margin: 120rem 0;
+  }
+
+  &__content {
     &_top {
       text-align: center;
+
+      @media (width <= $breakpoint-mob) {
+        max-width: 267rem;
+        text-align: initial;
+      }
     }
 
-    &_bottom{
+    &_bottom {
       width: 100%;
       margin: 40rem 0 0;
 
-      .list{
+      .list {
         display: flex;
         flex-direction: column;
         gap: 16rem;
         max-width: 1036rem;
         margin: 0 auto;
+
+        @media (width <= $breakpoint-mob) {
+          gap: 8rem;
+        }
       }
     }
-  }
-}
-
-@media (width <= $breakpoint-mob) {
-  .FAQSection{
-    margin: 80rem 0;
-
   }
 }
