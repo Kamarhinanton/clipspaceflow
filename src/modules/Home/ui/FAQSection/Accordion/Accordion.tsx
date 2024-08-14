@@ -1,9 +1,6 @@
 import React, { FC } from 'react'
 import classNames from 'classnames'
 import { motion, AnimatePresence } from 'framer-motion'
-import { BackgroundImage } from '@/ui/BackgroundImage/BackgroundImage'
-// import ArrowSelect from '@/ui/Icons/ArrowSelect'
-// import AnimatedText from '@/ui/AnimatedText/AnimatedText'
 
 import styles from './Accordion.module.scss'
 
