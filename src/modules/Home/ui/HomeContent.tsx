@@ -8,6 +8,7 @@ import HiringSection from '@/modules/Home/ui/HiringSection/HiringSection'
 import MakeIt from '@/modules/Home/ui/MakeIt/MakeIt'
 import JoinBeta from '@/modules/Home/ui/JoinBeta/JoinBeta'
 import FAQSection from '@/modules/Home/ui/FAQSection/FAQSection'
+import RunningText from '@/modules/Home/ui/RunningText/RunningText.module'
 
 const HomeContent = () => {
   return (
@@ -21,6 +22,7 @@ const HomeContent = () => {
       <MakeIt />
       <JoinBeta />
       <FAQSection />
+      <RunningText />
     </main>
   )
 }

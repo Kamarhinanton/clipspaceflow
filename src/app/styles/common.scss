@@ -33,11 +33,12 @@ body {
 
 .wrapper {
   min-height: 100%;
-  overflow: hidden;
 }
 
 main {
   position: relative;
+  z-index: 2;
+  background-color: var(--black);
 }
 
 .root{

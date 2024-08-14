@@ -1,0 +1,35 @@
+@import '@/app/styles/variables/breakpoints';
+
+.runningText{
+  overflow: hidden;
+
+  &__content{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    padding: 30rem 0;
+
+    .text{
+      position: relative;
+      display: inline-block;
+      padding: 0 96rem 0 64rem;
+      font-size: 100rem;
+      white-space: nowrap;
+
+      @media (width<= $breakpoint-mob) {
+        padding: 0 72rem 0 40rem;
+        font-size: 56rem;
+      }
+
+      &::before{
+        top: 50rem;
+        right: 0;
+        left: initial;
+
+        @media (width<= $breakpoint-mob) {
+          top: 27rem;
+        }
+      }
+    }
+  }
+}
