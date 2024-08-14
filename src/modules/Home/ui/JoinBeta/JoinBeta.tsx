@@ -7,7 +7,7 @@ import styles from './JoinBeta.module.scss'
 
 const JoinBeta = () => {
   return (
-    <section id={'paragraph-1'} className={styles['joinBeta']}>
+    <section id={'paragraph-3'} className={styles['joinBeta']}>
       <Container>
         <h2
           className={classNames(

@@ -6,7 +6,7 @@ import styles from './Demo.module.scss'
 
 const Demo = () => {
   return (
-    <section className={styles['demo']}>
+    <section id={'paragraph-2'} className={styles['demo']}>
       <Container size={'large'}>
         <div className={styles['demo__content']}>
           <p className={styles['demo__content_text']}>
