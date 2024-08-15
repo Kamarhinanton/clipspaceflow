@@ -10,7 +10,6 @@ import styles from './VideoEditorsSlider.module.scss'
 import 'swiper/css'
 
 const swiperProps: SwiperProps = {
-  direction: 'vertical',
   speed: 2000,
   loop: true,
   autoplay: true,
@@ -19,7 +18,7 @@ const swiperProps: SwiperProps = {
   pagination: {
     el: '.current-pagination',
     clickable: false,
-    verticalClass: styles['pagination'],
+    horizontalClass: styles['pagination'],
     bulletClass: styles['pagination__bullet'],
     bulletActiveClass: styles['active'],
   },
