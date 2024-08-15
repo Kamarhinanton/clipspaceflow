@@ -1,10 +1,10 @@
 import routes from '@/utils/routes'
 export const headerNavigationLinks = [
   {
-    href: routes.public.joinBeta,
     description: 'Join Beta',
     id: 1,
     desktop: true,
+    typeformId: 'b2YpsCGe',
   },
   {
     href: routes.public.howItWorks,
@@ -19,15 +19,15 @@ export const headerNavigationLinks = [
     desktop: true,
   },
   {
-    href: '/',
     description: 'Join as video creator',
     id: 4,
     desktop: false,
+    typeformId: 'HvyeP6sN',
   },
   {
-    href: '/',
     description: 'Hire video creators',
     id: 5,
     desktop: false,
+    typeformId: 'Y56992yH',
   },
 ]

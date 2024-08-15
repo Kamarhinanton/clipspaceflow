@@ -2,6 +2,7 @@ import React, { useRef } from 'react'
 import Container from '@/app/layouts/Container'
 import classNames from 'classnames'
 import { MotionValue, useScroll, useTransform, motion } from 'framer-motion'
+import { PopupButton } from '@typeform/embed-react'
 
 import styles from './RunningText.module.scss'
 
@@ -25,21 +26,36 @@ const RunningText = () => {
           ref={refTarget}
           className={styles['runningText__content']}
         >
-          <h3 className={classNames(styles['text'], 'h1', 'decor-star')}>
+          <PopupButton
+            id={'b2YpsCGe'}
+            className={classNames(styles['text'], 'h1', 'decor-star')}
+          >
             <span>JOIN OUR BETA</span>
-          </h3>
-          <h3 className={classNames(styles['text'], 'h1', 'decor-star')}>
+          </PopupButton>
+          <PopupButton
+            id={'b2YpsCGe'}
+            className={classNames(styles['text'], 'h1', 'decor-star')}
+          >
             <span>JOIN OUR BETA</span>
-          </h3>
-          <h3 className={classNames(styles['text'], 'h1', 'decor-star')}>
+          </PopupButton>
+          <PopupButton
+            id={'b2YpsCGe'}
+            className={classNames(styles['text'], 'h1', 'decor-star')}
+          >
             <span>JOIN OUR BETA</span>
-          </h3>
-          <h3 className={classNames(styles['text'], 'h1', 'decor-star')}>
+          </PopupButton>
+          <PopupButton
+            id={'b2YpsCGe'}
+            className={classNames(styles['text'], 'h1', 'decor-star')}
+          >
             <span>JOIN OUR BETA</span>
-          </h3>
-          <h3 className={classNames(styles['text'], 'h1', 'decor-star')}>
+          </PopupButton>
+          <PopupButton
+            id={'b2YpsCGe'}
+            className={classNames(styles['text'], 'h1', 'decor-star')}
+          >
             <span>JOIN OUR BETA</span>
-          </h3>
+          </PopupButton>
         </motion.div>
       </Container>
     </section>

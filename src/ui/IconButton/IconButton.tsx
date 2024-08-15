@@ -1,15 +1,17 @@
 import React, { FC, ReactNode } from 'react'
 import Link from 'next/link'
 import classNames from 'classnames'
+import { PopupButton } from '@typeform/embed-react'
 
 import styles from './IconButton.module.scss'
 
 type IconButtonType = {
   title: string
   children: ReactNode
-  href: string
+  href?: string
   className?: string
   targetBlank?: boolean
+  typeformId?: string
 }
 
 const IconButton: FC<IconButtonType> = ({
@@ -18,16 +20,27 @@ const IconButton: FC<IconButtonType> = ({
   children,
   className,
   targetBlank = false,
+  typeformId,
 }) => {
-  return (
-    <Link
-      target={targetBlank ? '_blank' : ''}
+  return typeformId ? (
+    <PopupButton
+      id={typeformId}
       className={classNames(styles['iconButton'], className)}
-      href={href}
     >
       <div className={styles['iconButton__logo']}>{children}</div>
       {title}
-    </Link>
+    </PopupButton>
+  ) : (
+    href && (
+      <Link
+        target={targetBlank ? '_blank' : ''}
+        className={classNames(styles['iconButton'], className)}
+        href={href}
+      >
+        <div className={styles['iconButton__logo']}>{children}</div>
+        {title}
+      </Link>
+    )
   )
 }
 

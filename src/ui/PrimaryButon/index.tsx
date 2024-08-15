@@ -1,5 +1,6 @@
-import React, { ButtonHTMLAttributes, DetailedHTMLProps, FC } from 'react'
+import React, { FC, ReactNode } from 'react'
 import classNames from 'classnames'
+import { PopupButton } from '@typeform/embed-react'
 
 import styles from './PrimaryButton.module.scss'
 
@@ -10,17 +11,16 @@ type ButtonPrimaryProps = {
   className?: string
   variant?: ButtonPrimaryVariants
   size?: ButtonPrimarySizes
-} & DetailedHTMLProps<
-  ButtonHTMLAttributes<HTMLButtonElement>,
-  HTMLButtonElement
->
+  children: ReactNode
+  id: string
+}
 
 const PrimaryButton: FC<ButtonPrimaryProps> = ({
   children,
   variant = 'light',
   size = 'small',
   className,
-  ...buttonProps
+  id = 'b2YpsCGe',
 }) => {
   const mods = {
     [styles[variant]]: true,
@@ -28,15 +28,15 @@ const PrimaryButton: FC<ButtonPrimaryProps> = ({
   }
 
   return (
-    <button
+    <PopupButton
       className={classNames(styles['primaryButton'], className, mods)}
-      {...buttonProps}
+      id={id}
     >
       <span>{children}</span>
       {variant === 'dark' && (
         <span className={styles['primaryButton__cloneText']}>{children}</span>
       )}
-    </button>
+    </PopupButton>
   )
 }
 

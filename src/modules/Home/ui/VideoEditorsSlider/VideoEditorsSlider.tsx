@@ -13,8 +13,8 @@ const swiperProps: SwiperProps = {
   direction: 'vertical',
   speed: 2000,
   loop: true,
-  // autoplay: true,
-  // allowTouchMove: false,
+  autoplay: true,
+  allowTouchMove: false,
   slidesPerView: 1,
   pagination: {
     el: '.current-pagination',
@@ -56,6 +56,7 @@ const VideoEditorsSlider = () => {
                     className={styles['button']}
                     size={'large'}
                     variant={'light'}
+                    id={'Y56992yH'}
                   >
                     Hire top video creators
                   </PrimaryButton>

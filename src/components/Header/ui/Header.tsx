@@ -43,10 +43,14 @@ const Header = () => {
           <div className={styles['header__content_navigation']}>
             <Navigation />
             <div className={styles['buttons']}>
-              <PrimaryButton className={styles['btn']} variant={'dark'}>
+              <PrimaryButton
+                id={'HvyeP6sN'}
+                className={styles['btn']}
+                variant={'dark'}
+              >
                 Join as video creator
               </PrimaryButton>
-              <PrimaryButton>Hire video creators</PrimaryButton>
+              <PrimaryButton id={'Y56992yH'}>Hire video creators</PrimaryButton>
             </div>
           </div>
           {width <= breakpointMob && (

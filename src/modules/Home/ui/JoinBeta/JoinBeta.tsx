@@ -35,7 +35,11 @@ const JoinBeta = () => {
               Our new AI model that helps to find the perfect video creators in
               just 1 click. Try it today.
             </p>
-            <PrimaryButton className={styles['button']} size={'large'}>
+            <PrimaryButton
+              id={'b2YpsCGe'}
+              className={styles['button']}
+              size={'large'}
+            >
               Join Beta
             </PrimaryButton>
           </div>

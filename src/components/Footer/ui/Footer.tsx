@@ -45,7 +45,7 @@ const Footer = () => {
             >
               <IconX />
             </IconButton>
-            <IconButton title={'Join our Beta'} href={'/'}>
+            <IconButton typeformId={'b2YpsCGe'} title={'Join our Beta'}>
               <IconAI />
             </IconButton>
             <p className={styles['join__text']}>

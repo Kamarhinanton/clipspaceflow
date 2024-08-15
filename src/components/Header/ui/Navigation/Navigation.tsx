@@ -4,6 +4,7 @@ import { headerNavigationLinks } from '@/components/Header/ui/Navigation/data'
 import classNames from 'classnames'
 import useWindowDimensions from '@/hooks/useWindowDimensions'
 import { breakpointMob } from '@/utils/variables'
+import { PopupButton } from '@typeform/embed-react'
 
 import styles from './Navigation.module.scss'
 
@@ -28,19 +29,34 @@ const Navigation: FC<NavigationType> = ({ setOpened }) => {
 
   return (
     <nav className={styles['navigation']}>
-      {headerNavigationLinks.map((link) => (
-        <Link
-          className={classNames(
-            styles['navigation__link'],
-            !link.desktop && [styles['desktopHidden']],
-          )}
-          onClick={() => handleItemClick(link.id)}
-          key={link.id}
-          href={link.href}
-        >
-          {link.description}
-        </Link>
-      ))}
+      {headerNavigationLinks.map((link) =>
+        link.typeformId ? (
+          <PopupButton
+            id={link.typeformId}
+            className={classNames(
+              styles['navigation__link'],
+              !link.desktop && [styles['desktopHidden']],
+            )}
+            key={link.id}
+          >
+            {link.description}
+          </PopupButton>
+        ) : (
+          link.href && (
+            <Link
+              className={classNames(
+                styles['navigation__link'],
+                !link.desktop && [styles['desktopHidden']],
+              )}
+              onClick={() => handleItemClick(link.id)}
+              key={link.id}
+              href={link.href}
+            >
+              {link.description}
+            </Link>
+          )
+        ),
+      )}
     </nav>
   )
 }

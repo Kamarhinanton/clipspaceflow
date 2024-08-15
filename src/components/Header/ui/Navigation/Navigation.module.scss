@@ -14,6 +14,7 @@
     margin: 0 16rem;
     color: var(--grey-light);
     font: var(--font-s-bold);
+    background-color: transparent;
     transition:color var(--duration) var(--ease);
 
     &.desktopHidden{
@@ -26,6 +27,7 @@
       margin: 0 0 38rem;
       color: var(--white);
       font-size: 32rem;
+      text-align: left;
     }
 
     @media (width>$breakpoint-mob) {

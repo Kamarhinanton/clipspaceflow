@@ -29,7 +29,11 @@ const HeroSection = () => {
               Get matched with top video editors, UGC creators and video ads
               creators.
             </p>
-            <PrimaryButton className={styles['button']} size={'large'}>
+            <PrimaryButton
+              id={'Y56992yH'}
+              className={styles['button']}
+              size={'large'}
+            >
               Hire top video creators
             </PrimaryButton>
             <p
