@@ -37,7 +37,8 @@ body {
 
 main {
   position: relative;
-  z-index: 2;
+  -webkit-transform: translate3d(0,0,0);
+  z-index: 999;
   background-color: var(--black);
 }
 
