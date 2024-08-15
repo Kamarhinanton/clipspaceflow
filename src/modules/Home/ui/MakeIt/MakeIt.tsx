@@ -1,9 +1,6 @@
-import React, { useCallback, useEffect, useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import Container from '@/app/layouts/Container'
-import Lottie, {
-  LottieRefCurrentProps,
-  useLottieInteractivity,
-} from 'lottie-react'
+import Lottie, { LottieRefCurrentProps } from 'lottie-react'
 import { makeItData } from '@/modules/Home/ui/MakeIt/data/data'
 import { BackgroundImage } from '@/ui/BackgroundImage/BackgroundImage'
 import { useInView } from 'framer-motion'
