@@ -13,6 +13,7 @@
     "stylelint:fix": "npx stylelint \"**/*.scss\" --fix"
   },
   "dependencies": {
+    "@typeform/embed-react": "^4.0.0",
     "@types/react-lottie": "^1.2.10",
     "classnames": "^2.5.1",
     "framer-motion": "^11.3.21",
