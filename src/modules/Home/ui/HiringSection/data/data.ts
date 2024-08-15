@@ -6,6 +6,7 @@ export const listContent = [
     description: 'Finding available creators is very challenging.',
     src: notification,
     id: 1,
+    playOnce: true,
   },
   {
     description: 'It’s very hard to find qualified niche creators.',

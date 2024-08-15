@@ -1,25 +1,40 @@
-import React from 'react'
+import React, { useCallback, useEffect, useRef } from 'react'
 import Container from '@/app/layouts/Container'
-import Lottie from 'lottie-react'
+import Lottie, {
+  LottieRefCurrentProps,
+  useLottieInteractivity,
+} from 'lottie-react'
 import { makeItData } from '@/modules/Home/ui/MakeIt/data/data'
 import { BackgroundImage } from '@/ui/BackgroundImage/BackgroundImage'
+import { useInView } from 'framer-motion'
 
 import styles from './MakeIt.module.scss'
 
 import lottie1 from './data/1.json'
 
 const MakeIt = () => {
+  const ref = useRef<LottieRefCurrentProps>(null)
+  const sectionRef = useRef(null)
+  const isInView = useInView(sectionRef, { once: true, amount: 'all' })
+
+  useEffect(() => {
+    if (isInView) {
+      ref.current?.play()
+    }
+  }, [isInView])
+
   return (
     <section className={styles['makeIt']}>
       <Container size={'large'}>
         <div className={styles['makeIt__content']}>
-          <div className={styles['title']}>
+          <div ref={sectionRef} className={styles['title']}>
             <h2 className={'h1'}>WE MAKE IT EASY</h2>
             <Lottie
               className={styles['title__lottie']}
               animationData={lottie1}
-              autoplay={true}
-              loop={true}
+              lottieRef={ref}
+              autoplay={false}
+              loop={false}
             />
           </div>
           <ul className={styles['list']}>
