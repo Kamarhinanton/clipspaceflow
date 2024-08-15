@@ -70,6 +70,10 @@
             margin: 40rem 0 0;
             font: var(--font-m-v);
 
+            span{
+              display: block;
+            }
+
             @media (width <= $breakpoint-mob){
               margin: 30rem 0 0;
             }

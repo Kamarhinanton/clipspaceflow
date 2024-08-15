@@ -7,7 +7,7 @@ export const accordionsDescription = [
   },
   {
     id: 2,
-    title: 'Hat types of video creators do you have?',
+    title: 'What types of video creators do you have?',
     description:
       'Our platform offers services from professional video editors, UGC creators, and video ad creators.',
   },

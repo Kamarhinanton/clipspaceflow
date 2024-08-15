@@ -10,12 +10,16 @@
     background-color: var(--light-black);
     border-radius: 12rem;
     cursor: pointer;
+    transition:background-color var(--duration) var(--ease);
+
 
     @media (width <= $breakpoint-mob) {
       font-size: 16rem;
     }
 
     &.active {
+      background-color: var(--black-faq);
+
       &::before {
         transform: translateY(-50%) rotateX(0deg);
         opacity: 1;
@@ -52,7 +56,7 @@
         padding: 23rem 36rem;
         font: var(--font-m-v);
         font-size: 22rem;
-        background-color: var(--light-black);
+        background-color: var(--black-faq);
         border-radius: 12rem;
 
         @media (width <= $breakpoint-mob) {

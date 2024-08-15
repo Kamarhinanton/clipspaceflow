@@ -8,6 +8,7 @@ import { legalLinks, teamLinks } from '@/components/Footer/ui/Column/data'
 import IconButton from '@/ui/IconButton/IconButton'
 import IconX from '../../../../public/icons/social/x.svg'
 import IconAI from '../../../../public/icons/social/ai.svg'
+import routes from '@/utils/routes'
 
 import styles from './Footer.module.scss'
 
@@ -17,9 +18,12 @@ const Footer = () => {
       <Container>
         <div className={styles['footer__content']}>
           <div className={styles['social']}>
-            <h2 className={classNames('h2', styles['social__title'])}>
+            <Link
+              href={routes.public.index}
+              className={classNames('h2', styles['social__title'])}
+            >
               CLIPSPACE CO. 2024
-            </h2>
+            </Link>
             <Link
               target="_blank"
               href={'mailto:hello@clipspace.co'}

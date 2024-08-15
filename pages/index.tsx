@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Clipspace flow</title>
+        <title>Clipspace – Hire Top Video Creators Fast With AI Matching</title>
       </Head>
       <HomeContent />
     </>
