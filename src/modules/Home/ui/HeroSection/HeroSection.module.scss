@@ -3,7 +3,7 @@
 .hero{
   display: flex;
   align-items: center;
-  min-height: calc(100vh - 84rem);
+  min-height: calc(80vh - 84rem);
 
   @media (width <= $breakpoint-mob) {
     align-items: initial;

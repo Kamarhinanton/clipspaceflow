@@ -10,7 +10,7 @@
     background-color: var(--light-black);
     border-radius: 12rem;
     cursor: pointer;
-    transition:background-color var(--duration) var(--ease);
+    transition: background-color var(--duration) var(--ease);
 
 
     @media (width <= $breakpoint-mob) {
@@ -58,6 +58,17 @@
         font-size: 22rem;
         background-color: var(--black-faq);
         border-radius: 12rem;
+
+        a {
+          color: var(--green);
+          font: var(--font-m-v);
+
+          @media (width > $breakpoint-mob) {
+            &:hover {
+              opacity: 0.5;
+            }
+          }
+        }
 
         @media (width <= $breakpoint-mob) {
           font-size: 16rem;

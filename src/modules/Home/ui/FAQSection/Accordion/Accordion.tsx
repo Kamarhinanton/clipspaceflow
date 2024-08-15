@@ -8,7 +8,7 @@ type AccordionType = {
   i: number
   expanded: boolean | number
   setExpanded: React.Dispatch<React.SetStateAction<number | false>>
-  description?: string
+  description?: string | TrustedHTML
   title?: string
 }
 
@@ -52,7 +52,12 @@ const Accordion: FC<AccordionType> = ({
               exit={{ opacity: 0 }}
             >
               <div className={styles['item__dropdownMenu_description']}>
-                <p className={styles['text']}>{description}</p>
+                {description && (
+                  <p
+                    className={styles['text']}
+                    dangerouslySetInnerHTML={{ __html: description }}
+                  />
+                )}
               </div>
             </motion.div>
           </motion.div>

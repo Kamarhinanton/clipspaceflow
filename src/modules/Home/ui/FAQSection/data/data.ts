@@ -33,6 +33,6 @@ export const accordionsDescription = [
     id: 6,
     title: 'I have more questions!',
     description:
-      'Feel free to contact us at hello@clipspace.co for any questions!',
+      'Feel free to contact us at <a href="mailto:hello@clipspace.co">hello@clipspace.co</a>  for any questions!',
   },
 ]
